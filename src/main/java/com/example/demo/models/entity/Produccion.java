@@ -24,4 +24,8 @@ public class Produccion {
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
     private List<Detallepedido> detallepedidos;
 
+    @ManyToOne
+    @JoinColumn(name = "operario_id", insertable = false, updatable = false, nullable = false)
+    private Operario operario;
+
 }

@@ -22,5 +22,5 @@ public class Cliente {
     private String tipo_cliente;
 
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Producto> productos;
+    private List<Ordenpedido> ordenpedidos;
 }

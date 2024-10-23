@@ -1,4 +1,7 @@
 package com.example.demo.repository;
 
-public interface AdministradorRepository {
+import com.example.demo.models.entity.Administrador;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface AdministradorRepository extends JpaRepository<Administrador, Long> {
 }

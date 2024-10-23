@@ -14,7 +14,7 @@ public class Producto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String nombre;
     private String tipo;
     private float capacidad;
@@ -25,9 +25,11 @@ public class Producto {
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
     private List<Detallepedido> detallepedidos;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id", referencedColumnName = "id", unique = true)
-    private Insumo insumo;
+   /* @OneToOne(mappedBy = "id", cascade = CascadeType.ALL)
+    private Insumo insumo;*/
+
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
+    private List<Envace> envaces;
 
     public Producto() {}
 

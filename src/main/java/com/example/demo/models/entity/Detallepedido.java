@@ -14,15 +14,15 @@ public class Detallepedido {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false, nullable = false)
+    @JoinColumn(name = "producto_id", insertable = false, updatable = false, nullable = false)
     private Producto producto;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false, nullable = false)
+    @JoinColumn(name = "produccion_id", insertable = false, updatable = false, nullable = false)
     private Produccion produccion;
 
     @ManyToOne
-    @JoinColumn(name = "id", insertable = false, updatable = false, nullable = false)
+    @JoinColumn(name = "ordenpedido_id", insertable = false, updatable = false, nullable = false)
     private Ordenpedido ordenpedido;
 
     private float presion;

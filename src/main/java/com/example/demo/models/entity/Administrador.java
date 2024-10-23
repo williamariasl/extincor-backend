@@ -3,6 +3,8 @@ package com.example.demo.models.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "administrador")
@@ -16,4 +18,11 @@ public class Administrador {
     private String correo;
     private String telefono;
     private String role;
+
+
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
+    private List<Ordenpedido> ordenpedidos;
+
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
+    private List<Compra> compras;
 }
