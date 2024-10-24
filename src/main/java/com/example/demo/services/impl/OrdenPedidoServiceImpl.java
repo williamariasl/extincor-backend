@@ -74,6 +74,7 @@ public class OrdenPedidoServiceImpl implements OrdenPedidoService {
         dto.setEstado_pedido(ordenPedido.getEstado_pedido());
         dto.setFecha_entrega(ordenPedido.getFecha_entrega());
         dto.setMonto_total(ordenPedido.getMonto_total());
+        dto.setCliente_id(ordenPedido.getCliente().getId());
         return dto;
     }
 
